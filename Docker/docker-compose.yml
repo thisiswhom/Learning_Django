@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  password-maker:
+    image: kevincarter00110101/passwordmaker:slim
+    ports:
+      - "8000:8000"

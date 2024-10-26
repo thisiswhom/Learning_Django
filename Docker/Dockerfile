@@ -1,5 +1,5 @@
 # Start from the official Python image
-FROM python:3.11
+FROM python:3.14-rc-slim
 
 # Set environment variables to prevent Python from writing .pyc files and to buffer output for easier debugging
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -23,4 +23,4 @@ RUN pip3 install --upgrade pip && \
 EXPOSE 8000
 
 # Command to run the Django development server
-CMD ["python", "./password_generator-project/manage.py", "runserver", "0.0.0.0:8001"]
+CMD ["python", "./password_generator-project/manage.py", "runserver", "0.0.0.0:8000"]
